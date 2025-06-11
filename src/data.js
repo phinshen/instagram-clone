@@ -6,12 +6,12 @@ export const PROFILE_DATA = {
     following: 9,
     subheader: "Sigma School | Tech Education & Services",
     account_type: "Education",
-    description: `
-    🚨 Upskill yourself, learn to code
-    👨‍💻 Develop full stack web & mobile apps
-    🤝🏻 Build real world projects
-    💯 Free if you don’t land a tech job
-    `,
+    description: [
+        "🚨 Upskill yourself, learn to code",
+        "👨‍💻 Develop full stack web & mobile apps",
+        "🤝🏻 Build real world projects",
+        "💯 Free if you don’t land a tech job",
+    ],
     link: "linktr.ee/joinsigma",
     posts: [
         {

@@ -52,7 +52,9 @@ export default function ProfileHeader() {
                 <br />
                 <p style={{ margin: 0, fontWeight: "bold" }}>{subheader}</p>
                 <p style={{ margin: 0, color: "grey" }}>{account_type}</p>
-                <p style={{ margin: 0 }}>{description}</p>
+                {description.map((line, index) => (
+                    <p className="m-0" key={index}>{line}</p>
+                ))}
                 <a href={link}>{link}</a>
             </Col>
         </Row>
