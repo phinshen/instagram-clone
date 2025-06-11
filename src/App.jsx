@@ -25,7 +25,7 @@ export default function App() {
           <IconButton className="bi bi-chat" />
           <IconButton className="bi bi-heart" />
           <IconButton className="bi bi-plus-circle" />
-          <IconButton className="bi bi-person-circle" />
+          <IconButton isAvatar />
           <IconButton className="bi bi-list" isBottom />
         </Col>
 
