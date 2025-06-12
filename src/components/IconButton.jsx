@@ -2,7 +2,7 @@ import { Button, Image } from 'react-bootstrap';
 import { useContext } from 'react';
 import { ProfileContext } from '../App';
 
-export default function IconButton({ isTop, isBottom, className, isAvatar }) {
+export default function IconButton({ isTop, isBottom, className, isAvatar, onClick }) {
     const profile = useContext(ProfileContext);
     let margin = "light";
 
@@ -13,7 +13,7 @@ export default function IconButton({ isTop, isBottom, className, isAvatar }) {
     }
 
     return (
-        <Button variant={margin} style={{ marginBottom: "7px" }}>
+        <Button variant={margin} style={{ marginBottom: "7px" }} onClick={onClick}>
             {isAvatar ? (
                 <Image
                     src={profile.image}
