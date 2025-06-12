@@ -1,7 +1,7 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { Row, Col, Image, Button } from 'react-bootstrap';
 import { useState } from 'react';
-import { deletePost } from '../features/posts/postsSlice';
+import { deletePost, likePost } from '../features/posts/postsSlice';
 import UpdatePostModal from "./UpdatePostModal";
 
 
@@ -31,6 +31,9 @@ export default function ImageGrid() {
                 <Button variant='outline-danger' onClick={() => handleDelete(post.id)}>
                     <i className="bi bi-trash"></i>
                 </Button>
+                <Button variant='success' onClick={() => handleLike(post.id)}>
+                    <i className="bi bi-hand-thumbs-up"></i> {post.likes}
+                </Button>
             </Col>
         ));
     };
@@ -39,6 +42,10 @@ export default function ImageGrid() {
         if (window.confirm("Are you sure you want to delete this post?")) {
             dispatch(deletePost(postId));
         }
+    };
+
+    const handleLike = (postId) => {
+        dispatch(likePost(postId));
     };
 
     return (
